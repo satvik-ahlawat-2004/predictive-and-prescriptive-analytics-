@@ -1,0 +1,176 @@
+Metadata-Version: 2.4
+Name: logistics_optimization
+Version: 1.0.0
+Summary: A comprehensive logistics optimization system using predictive and prescriptive analytics
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: scikit-learn>=1.2.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: seaborn>=0.12.0
+Requires-Dist: plotly>=5.13.0
+Requires-Dist: dash>=2.9.0
+Requires-Dist: dash-iconify>=0.1.2
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: fastapi>=0.95.0
+Requires-Dist: uvicorn>=0.21.0
+Requires-Dist: pulp>=2.7.0
+Requires-Dist: openpyxl>=3.1.0
+Requires-Dist: xlrd>=2.0.1
+Requires-Dist: dash-table>=5.0.0
+Requires-Dist: xgboost>=2.0.0
+Requires-Dist: reportlab>=4.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Logistics Optimization System
+
+A comprehensive Python-based solution that leverages predictive and prescriptive analytics to optimize logistics operations. This system analyzes historical data to forecast potential disruptions and provides actionable recommendations for logistics optimization.
+
+## Features
+
+- **Predictive Analytics**
+  - Shipment delay prediction
+  - Demand forecasting
+  - Weather impact analysis
+  - Traffic pattern prediction
+
+- **Prescriptive Analytics**
+  - Route optimization
+  - Inventory level optimization
+  - Delivery schedule optimization
+  - Resource allocation
+
+- **Data Pipeline**
+  - Automated data ingestion
+  - Data preprocessing and cleaning
+  - Feature engineering
+  - Model training and updating
+
+- **Visualization & Reporting**
+  - Interactive dashboards
+  - Real-time alerts
+  - Performance metrics
+  - Custom report generation
+
+## Project Structure
+
+```
+logistics_optimization/
+├── config/                 # Configuration files
+├── data/                   # Data storage
+│   ├── raw/               # Raw data
+│   ├── processed/         # Processed data
+│   └── external/          # External data sources
+├── models/                # Trained models
+├── notebooks/             # Jupyter notebooks
+├── src/                   # Source code
+│   ├── data/             # Data processing scripts
+│   ├── features/         # Feature engineering
+│   ├── models/           # Model training and prediction
+│   ├── optimization/     # Optimization algorithms
+│   ├── visualization/    # Visualization and reporting
+│   └── api/             # API endpoints
+├── tests/                # Unit tests
+└── logs/                 # Application logs
+```
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd logistics-optimization
+```
+
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+1. Configure the environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
+
+2. Run the data pipeline:
+```bash
+python src/data/run_pipeline.py
+```
+
+3. Start the API server:
+```bash
+uvicorn src.api.main:app --reload
+```
+
+4. Access the dashboard:
+```bash
+python src/visualization/run_dashboard.py
+```
+
+## Configuration
+
+The system can be configured through:
+- Environment variables (.env file)
+- Configuration files in the config/ directory
+- Command-line arguments for specific scripts
+
+## Development
+
+1. Install development dependencies:
+```bash
+pip install -r requirements-dev.txt
+```
+
+2. Run tests:
+```bash
+pytest
+```
+
+3. Format code:
+```bash
+black .
+```
+
+4. Run linter:
+```bash
+flake8
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
